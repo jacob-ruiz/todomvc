@@ -75,7 +75,7 @@
 			#todo-list, we can be sure the event is heard, run the appropriate
 			method, and inside that method, check that the event happened on the
 			appropriate element (example: only destroy a todo if the 'click' event
-		  was on the '.destroy' element specifically).
+			was on the '.destroy' element specifically).
 			*/
 			document.getElementById('todo-list')
 				.addEventListener('change', this.toggle.bind(this));
