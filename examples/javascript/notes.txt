@@ -1,0 +1,61 @@
+to try:
+
+[ ] put all code inside of an IIFE instead of jquery function call.
+
+-- reversing this because if i do this, it will cause all code to
+   break, so i can't see which replacements worked.
+
+[ ] remove jquery from each method in app.js
+      [x] create
+      [x] destroy
+      [x] toggleAll
+      [x] renderFooter
+      [x] edit
+      [x] update
+      [x] indexFromEl
+      [x] all "e"'s are jquery events. change.
+            [x] #new-todo
+            [x] #toggle-all
+            [x] #footer (#clear-completed)
+            [x] #todo-list
+      [ ] render
+            -- PICK UP LINE 106! ALMOST DONE!
+      [ ] ? Should I write a function that lets me not always write document.getElementById???
+
+      [ ] etc.
+
+      - Blog post: destroyCompleted was updated to be passed an event
+        so we can check to see that e.target was '#clear-completed'
+        we are leveraging bubbling to account for the fact that we
+        can't add the eventListener to '#clear-completed' directly
+        since it may not be on the page on load.
+
+
+      // need to change code somewhere else so
+			// that here we can do this:
+			// el.dataset.abort
+			if (el.dataset.'abort' === true) {
+				$el.data('abort', false);
+			} else {
+				this.todos[this.indexFromEl(el)].title = val;
+			}
+
+
+INSTRUCTIONS:
+
+5. Remove jQuery
+
+The objective with this exercise is really simple.
+Make the application work exactly the same but do
+so without any jQuery. To break this exercise into
+more manageable steps, start by removing jQuery from
+app.js method-by-method (create, destroy, etc). Once
+you’re done, remove the jQuery script tag from
+index.html (line 56).
+
+If you do the exercise correctly, everything in your
+application should work exactly as it did in the original
+application. What I really like about this exercise is
+that it really makes you think about what's happening
+in the application and it's really easy to see if you
+succeeded — the app either works at the end or it doesn't.
